@@ -8,19 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script>
-        function changePictureByDay() {
-            const dayspecial = ["cake1", "pizza", "panini", "cake2", "cake3", "chess", "crepe"];
-            const currentDay = new Date().getDay();
-            const imageElement = document.getElementById("dayImage");
-            const imageName = `assets/todays offer/${dayspecial[currentDay]}.png`;
-
-            imageElement.src = imageName;
-            imageElement.alt = `Image for ${dayspecial[currentDay]}`;
-        }
-
-        window.onload = changePictureByDay;
-    </script>
+    
 </head>
 <body>
     <header>
@@ -37,11 +25,60 @@
         </div>
         <hr>
     </header>
-    <center>
-        <div id="advert">
-            <img id="dayImage" src="assets/todays offer/pizza.png" alt="Today's Special" style="width: 100%; height: auto;    box-shadow: 0px 10px 20px black;">
-        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 7</div>
+              <img src="assets/todays offer/cake1.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 7</div>
+              <img src="assets/todays offer/cake2.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 7</div>
+              <img src="assets/todays offer/cake3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 7</div>
+                <img src="assets/todays offer/chess.png" style="width:100%">
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 7</div>
+                <img src="assets/todays offer/crepe.png" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 7</div>
+                <img src="assets/todays offer/panini.png" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 7</div>
+                <img src="assets/todays offer/pizza.png" style="width:100%">
+              </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+          </div>
         <br><br><br>
+        <center>
         <h1>Menu</h1>
     <div id="main">
         <div class="group">
@@ -327,5 +364,38 @@
     <footer>
         <a href="https://yassinedhouib8.wordpress.com" target="_blank"> &lt;The Web Developper\&gt;</a>
     </footer>
+    <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+document.addEventListener("DOMContentLoaded", function () {
+        showSlides(slideIndex);
+    });
+    </script>
 </body>
 </html>
