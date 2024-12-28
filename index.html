@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IYED COFFEE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script>
+        function changePictureByDay() {
+            const dayspecial = ["cake1", "pizza", "panini", "cake2", "cake3", "chess", "crepe"];
+            const currentDay = new Date().getDay();
+            const imageElement = document.getElementById("dayImage");
+            const imageName = `assets/todays offer/${dayspecial[currentDay]}.png`;
+
+            imageElement.src = imageName;
+            imageElement.alt = `Image for ${dayspecial[currentDay]}`;
+        }
+
+        window.onload = changePictureByDay;
+    </script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img id="img" src="assets/logo.png" alt="IYED Coffee ☕">
+        </div>
+        <hr>
+        <div class="navbar">
+            <ul>
+                <li><a href="https://www.instagram.com/iyed_colab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61561850925233" target="_blank">Facebook</a></li>
+                <li><a href="https://wa.me/+21694464635" target="_blank">Whatsapp</a></li>
+            </ul>
+        </div>
+        <hr>
+    </header>
+    <center>
+        <div id="advert">
+            <img id="dayImage" src="assets/todays offer/pizza.png" alt="Today's Special" style="width: 100%; height: auto;    box-shadow: 0px 10px 20px black;">
+        </div>
+        <br><br><br>
+        <h1>Menu</h1>
+    <div id="main">
+        <div class="group">
+            <h1 id="label">Café Machine</h1>
+            <table>
+                <tr>
+                    <td>ESPRESSO</td>
+                    <td>1.9 DT</td>
+                </tr>
+                <tr>
+                    <td>Americano</td>
+                    <td>2 DT</td>
+                </tr>
+                <tr>
+                    <td>Cappucin</td>
+                    <td>2.2 DT</td>
+                </tr>
+                <tr>
+                    <td>Direct</td>
+                    <td>2.5 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Café Aromatisé</h1>
+            <table>
+                <tr>
+                    <td>Noisette</td>
+                    <td>3 DT</td>
+                </tr>
+                <tr>
+                    <td>Caramel</td>
+                    <td>3 DT</td>
+                </tr>
+                <tr>
+                    <td>Cappuccino</td>
+                    <td>3.5 DT</td>
+                </tr>
+                <tr>
+                    <td>Chocoline</td>
+                    <td>2.5 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Chocolat Chaud</h1>
+            <table>
+                <tr>
+                    <td>Chocolat Chaud</td>
+                    <td>5 DT</td>
+                </tr>
+                <tr>
+                    <td>Chocolat A La Crème Chantillé</td>
+                    <td>6 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Thé</h1>
+            <table>
+                <tr>
+                    <td>Thé Vert</td>
+                    <td>1.5 DT</td>
+                </tr>
+                <tr>
+                    <td>Thé A La Menthe</td>
+                    <td>2 DT</td>
+                </tr>
+                <tr>
+                    <td>Thé Infusion</td>
+                    <td>3 DT</td>
+                </tr>
+                <tr>
+                    <td>Thé Aux Amandes</td>
+                    <td>5 DT</td>
+                </tr>
+                <tr>
+                    <td>Thé Fruit Sec</td>
+                    <td>7 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Pâtisseries</h1>
+            <table>
+                <tr>
+                    <td>Croissant</td>
+                    <td>1.5 DT</td>
+                </tr>
+                <tr>
+                    <td>Mille-fueuille</td>
+                    <td>1.7 DT</td>
+                </tr>
+                <tr>
+                    <td>Gateau Au Choix</td>
+                    <td>2.5 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Café Glacé</h1>
+            <table>
+                <tr>
+                    <td>Noisette</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Caramel</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Vanille</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Oréo</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Nutella</td>
+                    <td>8 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Smoothie</h1>
+            <table>
+                <tr>
+                    <td>Fruit Rouge</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Pina Colado</td>
+                    <td>7 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Milk Shake</h1>
+            <table>
+                <tr>
+                    <td>Oréo/Kinder</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Snickers</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Nutella</td>
+                    <td>8 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Jus Frais</h1>
+            <table>
+                <tr>
+                    <td>Orange</td>
+                    <td>4 DT</td>
+                </tr>
+                <tr>
+                    <td>Citron</td>
+                    <td>4 DT</td>
+                </tr>
+                <tr>
+                    <td>Banane</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Kiwi</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Fraise</td>
+                    <td>6 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Boissans</h1>
+            <table>
+                <tr>
+                    <td>Eau 1L</td>
+                    <td>2 DT</td>
+                </tr>
+                <tr>
+                    <td>Canette</td>
+                    <td>2.5 DT</td>
+                </tr>
+                <tr>
+                    <td>Shweeps</td>
+                    <td>3 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Mojito</h1>
+            <table>
+                <tr>
+                    <td>Virgin</td>
+                    <td>5 DT</td>
+                </tr>
+                <tr>
+                    <td>Red</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Pina Colado</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Black</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Energetique</td>
+                    <td>8 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Crêpe Sucré</h1>
+            <table>
+                <tr>
+                    <td>Chocolat</td>
+                    <td>5 DT</td>
+                </tr>
+                <tr>
+                    <td>Nutella</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Nutella Banane</td>
+                    <td>7 DT</td>
+                </tr>
+                <tr>
+                    <td>Nutella Fruit Sec</td>
+                    <td>8 DT</td>
+                </tr>
+                <tr>
+                    <td>Nutella Banane Fruit Sec</td>
+                    <td>10 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Crêpe Salé</h1>
+            <table>
+                <tr>
+                    <td>Jambon Fromage</td>
+                    <td>6 DT</td>
+                </tr>
+                <tr>
+                    <td>Thon Fromage</td>
+                    <td>7 DT</td>
+                </tr>
+            </table>
+        </div>
+        <div class="group">
+            <h1 id="label">Panini</h1>
+            <table>
+                <tr>
+                    <td>Salami</td>
+                    <td>5 DT</td>
+                </tr>
+                <tr>
+                    <td>Jambon</td>
+                    <td>5 DT</td>
+                </tr>
+                <tr>
+                    <td>Thon</td>
+                    <td>6 DT</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</center>
+    <footer>
+        <a href="https://yassinedhouib8.wordpress.com" target="_blank"> &lt;The Web Developper\&gt;</a>
+    </footer>
+</body>
+</html>
